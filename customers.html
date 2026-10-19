@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="View Forge store customer accounts and activity">
+    <title>Customers | Forge Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html" aria-label="Forge Admin dashboard"><span class="brand-mark">F</span><span><span class="brand-name">FORGE<span>.</span></span><span class="brand-caption">Admin console</span></span></a>
+        <nav aria-label="Admin navigation"><p class="nav-label">Workspace</p><ul class="nav-list">
+          <li><a class="nav-link" href="index.html"><span class="nav-icon">▦</span>Dashboard</a></li><li><a class="nav-link" href="orders.html"><span class="nav-icon">▤</span>Orders</a></li><li><a class="nav-link" href="products.html"><span class="nav-icon">▣</span>Products</a></li><li><a class="nav-link" href="categories.html"><span class="nav-icon">◫</span>Categories</a></li><li><a class="nav-link" href="customers.html" aria-current="page"><span class="nav-icon">♙</span>Customers</a></li><li><a class="nav-link" href="analytics.html"><span class="nav-icon">⌁</span>Analytics</a></li><li><a class="nav-link" href="reviews.html"><span class="nav-icon">☆</span>Feedback & reviews</a></li></ul><p class="nav-label">Account</p><ul class="nav-list"><li><a class="nav-link" href="profile.html"><span class="nav-icon">◎</span>Admin profile</a></li></ul></nav>
+      </aside>
+      <div class="main-area">
+        <header class="topbar"><p class="topbar-context">Forge Admin <span aria-hidden="true">/</span> Customers</p><div class="topbar-right"><a class="icon-button" href="reviews.html" aria-label="Customer feedback">♧</a><a class="user-chip" href="profile.html"><span class="avatar">AM</span><span><span class="user-name">Ayesha Malik</span><span class="user-role">Store administrator</span></span></a></div></header>
+        <main class="content">
+          <header class="page-heading"><div><p class="eyebrow">CUSTOMER RELATIONSHIPS</p><h1>Customers</h1><p class="page-description">Understand your community and keep track of customer activity.</p></div><div class="heading-actions"><a class="button secondary" href="analytics.html">Customer report ↗</a></div></header>
+          <section class="grid stats-grid" aria-label="Customer summary">
+            <article class="stat-card"><div class="stat-top"><span>Total customers</span><span class="stat-icon">♙</span></div><p class="stat-value">3,642</p><p class="stat-note">Registered accounts</p></article>
+            <article class="stat-card"><div class="stat-top"><span>New this month</span><span class="stat-icon">＋</span></div><p class="stat-value">126</p><p class="stat-note"><span class="positive">↑ 18%</span> vs. last month</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Returning customers</span><span class="stat-icon">↶</span></div><p class="stat-value">38.2%</p><p class="stat-note">Repeat purchase rate</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Average order value</span><span class="stat-icon">₨</span></div><p class="stat-value">₨ 54,290</p><p class="stat-note">Across all customers</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Newsletter members</span><span class="stat-icon">✉</span></div><p class="stat-value">2,108</p><p class="stat-note">Opted in to updates</p></article>
+          </section>
+          <section class="panel" aria-labelledby="customer-list">
+            <div class="panel-header"><div><h2 id="customer-list">Customer directory</h2><p class="panel-subtitle">Customer profiles and purchase history</p></div></div>
+            <form class="table-toolbar filters" action="customers.html" method="get">
+              <label class="filter-field search-field">Search customers<input name="search" type="search" placeholder="Name or email address"></label>
+              <label class="filter-field filter-fixed">Customer type<select name="type"><option>All customers</option><option>Returning</option><option>New</option></select></label>
+              <label class="filter-field filter-fixed">Joined<select name="joined"><option>Any time</option><option>This month</option><option>Last 90 days</option></select></label>
+              <button class="button small" type="submit">Apply</button>
+            </form>
+            <div class="table-wrap"><table><thead><tr><th>Customer</th><th>Joined</th><th>Orders</th><th>Total spent</th><th>Last order</th><th>Segment</th></tr></thead><tbody data-customers-table>
+              <tr><td><span class="table-primary">Hamza Siddiqui</span><span class="table-secondary">hamza.s@email.pk</span></td><td>12 Jan 2025</td><td>8</td><td>₨ 486,700</td><td>19 Oct 2026</td><td><span class="status">Returning</span></td></tr>
+              <tr><td><span class="table-primary">Sana Raza</span><span class="table-secondary">sana.r@email.pk</span></td><td>03 Mar 2025</td><td>4</td><td>₨ 215,400</td><td>19 Oct 2026</td><td><span class="status">Returning</span></td></tr>
+              <tr><td><span class="table-primary">Bilal Ahmed</span><span class="table-secondary">bilal.ahmed@email.pk</span></td><td>18 Oct 2026</td><td>1</td><td>₨ 23,800</td><td>18 Oct 2026</td><td><span class="status processing">New</span></td></tr>
+              <tr><td><span class="table-primary">Mehwish Khan</span><span class="table-secondary">mehwish.k@email.pk</span></td><td>22 Aug 2024</td><td>12</td><td>₨ 924,650</td><td>18 Oct 2026</td><td><span class="status">VIP</span></td></tr>
+              <tr><td><span class="table-primary">Omar Farooq</span><span class="table-secondary">omar.f@email.pk</span></td><td>06 Jul 2026</td><td>2</td><td>₨ 78,900</td><td>17 Oct 2026</td><td><span class="status">Returning</span></td></tr>
+              <tr><td><span class="table-primary">Noor Ali</span><span class="table-secondary">noor.ali@email.pk</span></td><td>11 Oct 2026</td><td>1</td><td>₨ 18,900</td><td>17 Oct 2026</td><td><span class="status processing">New</span></td></tr>
+            </tbody></table></div>
+            <footer class="table-footer"><span>Showing 1–6 of 3,642 customers</span><nav class="pagination" aria-label="Customer pages"><a class="page-number current" href="customers.html" aria-current="page">1</a><a class="page-number" href="customers.html?page=2">2</a><a class="page-number" href="customers.html?page=3">3</a><a class="page-number" href="customers.html?page=2" aria-label="Next page">→</a></nav></footer>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

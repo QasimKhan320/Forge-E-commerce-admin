@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Review and manage Forge customer orders">
+    <title>Orders | Forge Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html" aria-label="Forge Admin dashboard"><span class="brand-mark">F</span><span><span class="brand-name">FORGE<span>.</span></span><span class="brand-caption">Admin console</span></span></a>
+        <nav aria-label="Admin navigation"><p class="nav-label">Workspace</p><ul class="nav-list">
+          <li><a class="nav-link" href="index.html"><span class="nav-icon">▦</span>Dashboard</a></li><li><a class="nav-link" href="orders.html" aria-current="page"><span class="nav-icon">▤</span>Orders</a></li><li><a class="nav-link" href="products.html"><span class="nav-icon">▣</span>Products</a></li><li><a class="nav-link" href="categories.html"><span class="nav-icon">◫</span>Categories</a></li><li><a class="nav-link" href="customers.html"><span class="nav-icon">♙</span>Customers</a></li><li><a class="nav-link" href="analytics.html"><span class="nav-icon">⌁</span>Analytics</a></li><li><a class="nav-link" href="reviews.html"><span class="nav-icon">☆</span>Feedback & reviews</a></li></ul><p class="nav-label">Account</p><ul class="nav-list"><li><a class="nav-link" href="profile.html"><span class="nav-icon">◎</span>Admin profile</a></li></ul></nav>
+      </aside>
+      <div class="main-area">
+        <header class="topbar"><p class="topbar-context">Forge Admin <span aria-hidden="true">/</span> Orders</p><div class="topbar-right"><a class="icon-button" href="reviews.html" aria-label="Customer feedback">♧</a><a class="user-chip" href="profile.html"><span class="avatar">AM</span><span><span class="user-name">Ayesha Malik</span><span class="user-role">Store administrator</span></span></a></div></header>
+        <main class="content">
+          <header class="page-heading"><div><p class="eyebrow">FULFILMENT</p><h1>Order management</h1><p class="page-description">Track orders, review payment, and keep fulfilment moving.</p></div><div class="heading-actions"><a class="button secondary" href="analytics.html">Order report ↗</a></div></header>
+          <section class="grid stats-grid" aria-label="Order summary">
+            <article class="stat-card"><div class="stat-top"><span>All orders</span><span class="stat-icon">▤</span></div><p class="stat-value">1,284</p><p class="stat-note">Across all time</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Awaiting fulfilment</span><span class="stat-icon">◷</span></div><p class="stat-value">24</p><p class="stat-note"><span class="positive">8 new</span> today</p></article>
+            <article class="stat-card"><div class="stat-top"><span>In transit</span><span class="stat-icon">⇢</span></div><p class="stat-value">37</p><p class="stat-note">With delivery partners</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Delivered this month</span><span class="stat-icon">✓</span></div><p class="stat-value">312</p><p class="stat-note">97% on-time delivery</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Returns requested</span><span class="stat-icon">↶</span></div><p class="stat-value">6</p><p class="stat-note">2 need your review</p></article>
+          </section>
+          <section class="panel" aria-labelledby="orders-list">
+            <div class="panel-header"><div><h2 id="orders-list">All orders</h2><p class="panel-subtitle" data-order-count></p></div></div>
+            <form class="table-toolbar filters" action="orders.html" method="get">
+              <label class="filter-field search-field">Search orders<input name="search" type="search" placeholder="Order number or customer"></label>
+              <label class="filter-field filter-fixed">Status<select name="status"><option>All statuses</option><option>Pending</option><option>Processing</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></label>
+              <label class="filter-field filter-fixed">Date range<select name="range"><option>Last 30 days</option><option>Today</option><option>Last 7 days</option><option>This year</option></select></label>
+              <button class="button small" type="submit">Apply filters</button>
+            </form>
+            <div class="table-wrap"><table><thead><tr><th>Order ID</th><th>Customer</th><th>Date</th><th>Items</th><th>Payment</th><th>Total</th><th>Status</th></tr></thead><tbody data-orders-table>
+              <tr><td><span class="table-primary">#FG-10842</span></td><td><span class="table-primary">Hamza Siddiqui</span><span class="table-secondary">hamza.s@email.pk</span></td><td>19 Oct 2026</td><td>2 items</td><td>Paid</td><td>₨ 184,900</td><td><span class="status processing">Processing</span></td></tr>
+              <tr><td><span class="table-primary">#FG-10841</span></td><td><span class="table-primary">Sana Raza</span><span class="table-secondary">sana.r@email.pk</span></td><td>19 Oct 2026</td><td>1 item</td><td>Paid</td><td>₨ 62,500</td><td><span class="status">Delivered</span></td></tr>
+              <tr><td><span class="table-primary">#FG-10840</span></td><td><span class="table-primary">Bilal Ahmed</span><span class="table-secondary">bilal.ahmed@email.pk</span></td><td>18 Oct 2026</td><td>3 items</td><td>Cash on delivery</td><td>₨ 23,800</td><td><span class="status pending">Pending</span></td></tr>
+              <tr><td><span class="table-primary">#FG-10839</span></td><td><span class="table-primary">Mehwish Khan</span><span class="table-secondary">mehwish.k@email.pk</span></td><td>18 Oct 2026</td><td>1 item</td><td>Paid</td><td>₨ 96,200</td><td><span class="status">Delivered</span></td></tr>
+              <tr><td><span class="table-primary">#FG-10838</span></td><td><span class="table-primary">Omar Farooq</span><span class="table-secondary">omar.f@email.pk</span></td><td>17 Oct 2026</td><td>2 items</td><td>Paid</td><td>₨ 41,750</td><td><span class="status processing">Shipped</span></td></tr>
+              <tr><td><span class="table-primary">#FG-10837</span></td><td><span class="table-primary">Noor Ali</span><span class="table-secondary">noor.ali@email.pk</span></td><td>17 Oct 2026</td><td>1 item</td><td>Refunded</td><td>₨ 18,900</td><td><span class="status cancelled">Cancelled</span></td></tr>
+            </tbody></table></div>
+            <footer class="table-footer"><span>Showing 1–6 of 1,284 orders</span><nav class="pagination" aria-label="Order pages"><a class="page-number current" href="orders.html" aria-current="page">1</a><a class="page-number" href="orders.html?page=2">2</a><a class="page-number" href="orders.html?page=3">3</a><a class="page-number" href="orders.html?page=2" aria-label="Next page">→</a></nav></footer>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

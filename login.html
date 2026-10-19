@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sign in to the Forge administration console">
+    <title>Admin Login | Forge</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-brand-panel">
+        <a class="brand" href="index.html" aria-label="Forge Admin home"><span class="brand-mark">F</span><span><span class="brand-name">FORGE<span>.</span></span><span class="brand-caption">Gaming & PC · Admin</span></span></a>
+        <div class="login-message">
+          <p class="eyebrow">STORE OPERATIONS</p>
+          <h1>Run your store.<br><span style="color:var(--accent-bright)">Your way.</span></h1>
+          <p>Manage products, orders, customers, and insights from one place.</p>
+        </div>
+        <p class="login-foot">© 2026 Forge Gaming & PC. Internal access only.</p>
+      </section>
+      <section class="login-form-panel">
+        <form class="login-form" method="post">
+          <p class="eyebrow">WELCOME BACK</p>
+          <h2>Admin sign in</h2>
+          <p>Enter your work email and password to continue.</p>
+          <div class="field"><label for="email">Email address</label><input class="control" id="email" name="email" type="email" placeholder="name@forge.pk" autocomplete="username" required></div>
+          <div class="field"><label for="password">Password</label><input class="control" id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required></div>
+          <div class="login-options"><label class="check-row"><input type="checkbox" name="remember"> Remember me</label><a class="text-link" href="mailto:admin@forge.pk?subject=Password%20reset">Forgot password?</a></div>
+          <button class="button" type="button">Sign in to dashboard <span aria-hidden="true">→</span></button>
+          <p class="help-text" data-login-credentials style="margin-top:17px;text-align:center"></p>
+          <p class="help-text" style="margin-top:8px;text-align:center">Browser-only demo authentication is not secure. Never use real credentials.</p>
+          <p class="help-text" data-login-message role="alert" aria-live="polite" style="margin-top:12px;text-align:center"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

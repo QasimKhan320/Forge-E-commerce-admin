@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Manage products and stock in the Forge store">
+    <title>Products | Forge Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html" aria-label="Forge Admin dashboard"><span class="brand-mark">F</span><span><span class="brand-name">FORGE<span>.</span></span><span class="brand-caption">Admin console</span></span></a>
+        <nav aria-label="Admin navigation"><p class="nav-label">Workspace</p><ul class="nav-list">
+          <li><a class="nav-link" href="index.html"><span class="nav-icon">▦</span>Dashboard</a></li><li><a class="nav-link" href="orders.html"><span class="nav-icon">▤</span>Orders</a></li><li><a class="nav-link" href="products.html" aria-current="page"><span class="nav-icon">▣</span>Products</a></li><li><a class="nav-link" href="categories.html"><span class="nav-icon">◫</span>Categories</a></li><li><a class="nav-link" href="customers.html"><span class="nav-icon">♙</span>Customers</a></li><li><a class="nav-link" href="analytics.html"><span class="nav-icon">⌁</span>Analytics</a></li><li><a class="nav-link" href="reviews.html"><span class="nav-icon">☆</span>Feedback & reviews</a></li></ul><p class="nav-label">Account</p><ul class="nav-list"><li><a class="nav-link" href="profile.html"><span class="nav-icon">◎</span>Admin profile</a></li></ul></nav>
+      </aside>
+      <div class="main-area">
+        <header class="topbar"><p class="topbar-context">Forge Admin <span aria-hidden="true">/</span> Products</p><div class="topbar-right"><a class="icon-button" href="reviews.html" aria-label="Customer feedback">♧</a><a class="user-chip" href="profile.html"><span class="avatar">AM</span><span><span class="user-name">Ayesha Malik</span><span class="user-role">Store administrator</span></span></a></div></header>
+        <main class="content">
+          <header class="page-heading"><div><p class="eyebrow">CATALOGUE</p><h1>Product management</h1><p class="page-description">Organise your catalogue and keep product availability up to date.</p></div><div class="heading-actions"><a class="button secondary" href="categories.html">Manage categories</a><a class="button" href="product-form.html">＋ Add product</a></div></header>
+          <section class="grid stats-grid" aria-label="Product summary">
+            <article class="stat-card"><div class="stat-top"><span>Total products</span><span class="stat-icon">▣</span></div><p class="stat-value">248</p><p class="stat-note">Across all categories</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Published</span><span class="stat-icon">✓</span></div><p class="stat-value">226</p><p class="stat-note">Visible in storefront</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Low stock</span><span class="stat-icon">!</span></div><p class="stat-value">38</p><p class="stat-note"><span class="negative">Needs attention</span></p></article>
+            <article class="stat-card"><div class="stat-top"><span>Out of stock</span><span class="stat-icon">×</span></div><p class="stat-value">12</p><p class="stat-note">Currently unavailable</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Draft products</span><span class="stat-icon">◷</span></div><p class="stat-value">10</p><p class="stat-note">Not yet published</p></article>
+          </section>
+          <section class="panel" aria-labelledby="products-list">
+            <div class="panel-header"><div><h2 id="products-list">All products</h2><p class="panel-subtitle">Manage product details, pricing, and stock</p></div><a class="button secondary small" href="categories.html">Browse categories</a></div>
+            <form class="table-toolbar filters" action="products.html" method="get">
+              <label class="filter-field search-field">Search products<input name="search" type="search" placeholder="Product name or SKU"></label>
+              <label class="filter-field filter-fixed">Category<select name="category"><option>All categories</option><option>Gaming laptops</option><option>Graphics cards</option><option>Monitors</option><option>Peripherals</option></select></label>
+              <label class="filter-field filter-fixed">Stock status<select name="stock"><option>Any stock</option><option>In stock</option><option>Low stock</option><option>Out of stock</option></select></label>
+              <button class="button small" type="submit">Filter</button>
+            </form>
+            <div class="table-wrap"><table><thead><tr><th>Product</th><th>SKU</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Action</th></tr></thead><tbody data-products-table>
+              <tr><td><div class="product-cell"><span class="product-thumb">▰</span><span><span class="table-primary">Forge Titan RTX 5080</span><span class="table-secondary">Gaming desktop</span></span></div></td><td>FG-PC-0508</td><td>Gaming PCs</td><td>₨ 689,900</td><td>14 units<div class="stock-meter"><span style="width:75%"></span></div></td><td><span class="status">In stock</span></td><td><a class="text-link" href="product-form.html">Edit</a></td></tr>
+              <tr><td><div class="product-cell"><span class="product-thumb">▱</span><span><span class="table-primary">Acer Predator Helios Neo 16</span><span class="table-secondary">Gaming laptop</span></span></div></td><td>AC-LT-2416</td><td>Gaming laptops</td><td>₨ 429,999</td><td>3 units<div class="stock-meter"><span style="width:22%;background:var(--yellow)"></span></div></td><td><span class="status pending">Low stock</span></td><td><a class="text-link" href="product-form.html">Edit</a></td></tr>
+              <tr><td><div class="product-cell"><span class="product-thumb">▭</span><span><span class="table-primary">LG UltraGear 27GR75Q</span><span class="table-secondary">27″ QHD monitor</span></span></div></td><td>LG-MN-2775</td><td>Monitors</td><td>₨ 96,200</td><td>22 units<div class="stock-meter"><span style="width:84%"></span></div></td><td><span class="status">In stock</span></td><td><a class="text-link" href="product-form.html">Edit</a></td></tr>
+              <tr><td><div class="product-cell"><span class="product-thumb">▧</span><span><span class="table-primary">MSI GeForce RTX 4070 SUPER</span><span class="table-secondary">12 GB graphics card</span></span></div></td><td>MS-GC-407S</td><td>Graphics cards</td><td>₨ 224,500</td><td>0 units<div class="stock-meter"><span style="width:0%;background:var(--red)"></span></div></td><td><span class="status low">Out of stock</span></td><td><a class="text-link" href="product-form.html">Edit</a></td></tr>
+              <tr><td><div class="product-cell"><span class="product-thumb">⌨</span><span><span class="table-primary">Logitech G Pro X TKL</span><span class="table-secondary">Wireless gaming keyboard</span></span></div></td><td>LG-KB-PXTK</td><td>Peripherals</td><td>₨ 48,900</td><td>18 units<div class="stock-meter"><span style="width:66%"></span></div></td><td><span class="status">In stock</span></td><td><a class="text-link" href="product-form.html">Edit</a></td></tr>
+            </tbody></table></div>
+            <footer class="table-footer"><span>Showing 1–5 of 248 products</span><nav class="pagination" aria-label="Product pages"><a class="page-number current" href="products.html" aria-current="page">1</a><a class="page-number" href="products.html?page=2">2</a><a class="page-number" href="products.html?page=3">3</a><a class="page-number" href="products.html?page=2" aria-label="Next page">→</a></nav></footer>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

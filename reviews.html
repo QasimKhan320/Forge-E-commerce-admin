@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Read Forge customer feedback and product reviews">
+    <title>Feedback & Reviews | Forge Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html" aria-label="Forge Admin dashboard"><span class="brand-mark">F</span><span><span class="brand-name">FORGE<span>.</span></span><span class="brand-caption">Admin console</span></span></a>
+        <nav aria-label="Admin navigation"><p class="nav-label">Workspace</p><ul class="nav-list">
+          <li><a class="nav-link" href="index.html"><span class="nav-icon">▦</span>Dashboard</a></li><li><a class="nav-link" href="orders.html"><span class="nav-icon">▤</span>Orders</a></li><li><a class="nav-link" href="products.html"><span class="nav-icon">▣</span>Products</a></li><li><a class="nav-link" href="categories.html"><span class="nav-icon">◫</span>Categories</a></li><li><a class="nav-link" href="customers.html"><span class="nav-icon">♙</span>Customers</a></li><li><a class="nav-link" href="analytics.html"><span class="nav-icon">⌁</span>Analytics</a></li><li><a class="nav-link" href="reviews.html" aria-current="page"><span class="nav-icon">☆</span>Feedback & reviews</a></li></ul><p class="nav-label">Account</p><ul class="nav-list"><li><a class="nav-link" href="profile.html"><span class="nav-icon">◎</span>Admin profile</a></li></ul></nav>
+      </aside>
+      <div class="main-area">
+        <header class="topbar"><p class="topbar-context">Forge Admin <span aria-hidden="true">/</span> Feedback & reviews</p><div class="topbar-right"><a class="icon-button" href="orders.html" aria-label="Go to orders">▤</a><a class="user-chip" href="profile.html"><span class="avatar">AM</span><span><span class="user-name">Ayesha Malik</span><span class="user-role">Store administrator</span></span></a></div></header>
+        <main class="content">
+          <header class="page-heading"><div><p class="eyebrow">CUSTOMER VOICE</p><h1>Feedback & reviews</h1><p class="page-description">See what customers are saying about their products and experience.</p></div><div class="heading-actions"><a class="button secondary" href="customers.html">View customers</a></div></header>
+          <section class="grid stats-grid" aria-label="Review summary">
+            <article class="stat-card"><div class="stat-top"><span>Average rating</span><span class="stat-icon">★</span></div><p class="stat-value">4.7 / 5</p><p class="stat-note"><span class="stars">★★★★★</span></p></article>
+            <article class="stat-card"><div class="stat-top"><span>Total reviews</span><span class="stat-icon">☆</span></div><p class="stat-value">386</p><p class="stat-note">Across all products</p></article>
+            <article class="stat-card"><div class="stat-top"><span>New this month</span><span class="stat-icon">＋</span></div><p class="stat-value">42</p><p class="stat-note"><span class="positive">↑ 12%</span> vs. last month</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Needs a response</span><span class="stat-icon">◷</span></div><p class="stat-value">8</p><p class="stat-note">Keep the conversation going</p></article>
+            <article class="stat-card"><div class="stat-top"><span>5-star reviews</span><span class="stat-icon">★</span></div><p class="stat-value">72%</p><p class="stat-note">Customer satisfaction</p></article>
+          </section>
+          <form class="panel table-toolbar filters" action="reviews.html" method="get" style="margin-bottom:18px">
+            <label class="filter-field search-field">Search reviews<input name="search" type="search" placeholder="Product or reviewer"></label>
+            <label class="filter-field filter-fixed">Rating<select name="rating"><option>All ratings</option><option>5 stars</option><option>4 stars</option><option>3 stars</option><option>2 stars</option><option>1 star</option></select></label>
+            <label class="filter-field filter-fixed">Review status<select name="status"><option>All reviews</option><option>Needs response</option><option>Responded</option></select></label>
+            <button class="button small" type="submit">Filter reviews</button>
+          </form>
+          <section class="grid review-grid" aria-label="Recent customer reviews" data-review-list>
+            <article class="review-card"><div class="review-head"><div><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><h3 style="margin-top:8px">Excellent build quality</h3><p class="review-meta">Mehwish Khan · 18 Oct 2026</p></div><span class="status pending">Needs response</span></div><p class="review-copy">The monitor looks amazing and the colours are so vivid. Delivery was quick, packaging was secure, and setup was simple.</p><p class="review-meta">Product: LG UltraGear 27GR75Q</p><div style="margin-top:15px"><a class="button secondary small" href="customers.html">View customer</a></div></article>
+            <article class="review-card"><div class="review-head"><div><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><h3 style="margin-top:8px">Perfect for my setup</h3><p class="review-meta">Hamza Siddiqui · 17 Oct 2026</p></div><span class="status">Responded</span></div><p class="review-copy">The performance is fantastic for both gaming and editing. Support helped me choose the right configuration before ordering.</p><p class="review-meta">Product: Forge Titan RTX 5080</p><div style="margin-top:15px"><a class="button secondary small" href="products.html">View product</a></div></article>
+            <article class="review-card"><div class="review-head"><div><div class="stars" aria-label="4 out of 5 stars">★★★★☆</div><h3 style="margin-top:8px">Great laptop, slight delay</h3><p class="review-meta">Sana Raza · 15 Oct 2026</p></div><span class="status pending">Needs response</span></div><p class="review-copy">Really happy with the laptop and its performance. Delivery took one day longer than expected, but the team kept me updated.</p><p class="review-meta">Product: Acer Predator Helios Neo 16</p><div style="margin-top:15px"><a class="button secondary small" href="customers.html">View customer</a></div></article>
+            <article class="review-card"><div class="review-head"><div><div class="stars" aria-label="3 out of 5 stars">★★★☆☆</div><h3 style="margin-top:8px">Good product, needs better instructions</h3><p class="review-meta">Omar Farooq · 13 Oct 2026</p></div><span class="status">Responded</span></div><p class="review-copy">The keyboard feels solid and types well. The software setup took a bit of searching, but it works perfectly now.</p><p class="review-meta">Product: Logitech G Pro X TKL</p><div style="margin-top:15px"><a class="button secondary small" href="products.html">View product</a></div></article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

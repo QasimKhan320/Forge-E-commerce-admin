@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sales, order, and customer analytics for Forge">
+    <title>Analytics | Forge Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html" aria-label="Forge Admin dashboard"><span class="brand-mark">F</span><span><span class="brand-name">FORGE<span>.</span></span><span class="brand-caption">Admin console</span></span></a>
+        <nav aria-label="Admin navigation"><p class="nav-label">Workspace</p><ul class="nav-list">
+          <li><a class="nav-link" href="index.html"><span class="nav-icon">▦</span>Dashboard</a></li><li><a class="nav-link" href="orders.html"><span class="nav-icon">▤</span>Orders</a></li><li><a class="nav-link" href="products.html"><span class="nav-icon">▣</span>Products</a></li><li><a class="nav-link" href="categories.html"><span class="nav-icon">◫</span>Categories</a></li><li><a class="nav-link" href="customers.html"><span class="nav-icon">♙</span>Customers</a></li><li><a class="nav-link" href="analytics.html" aria-current="page"><span class="nav-icon">⌁</span>Analytics</a></li><li><a class="nav-link" href="reviews.html"><span class="nav-icon">☆</span>Feedback & reviews</a></li></ul><p class="nav-label">Account</p><ul class="nav-list"><li><a class="nav-link" href="profile.html"><span class="nav-icon">◎</span>Admin profile</a></li></ul></nav>
+      </aside>
+      <div class="main-area">
+        <header class="topbar"><p class="topbar-context">Forge Admin <span aria-hidden="true">/</span> Analytics</p><div class="topbar-right"><a class="icon-button" href="reviews.html" aria-label="Customer feedback">♧</a><a class="user-chip" href="profile.html"><span class="avatar">AM</span><span><span class="user-name">Ayesha Malik</span><span class="user-role">Store administrator</span></span></a></div></header>
+        <main class="content">
+          <header class="page-heading"><div><p class="eyebrow">PERFORMANCE</p><h1>Analytics & reporting</h1><p class="page-description">Explore store performance and customer trends at a glance.</p></div><div class="heading-actions"><form class="filters" data-report-filter><label class="filter-field">Reporting period<select name="period"><option value="30">Last 30 days</option><option value="7">Last 7 days</option><option value="90">This quarter</option><option value="365">This year</option><option value="all">All time</option></select></label><button class="button small" type="submit">Update view</button></form></div></header>
+          <section class="grid stats-grid" aria-label="Store performance">
+            <article class="stat-card"><div class="stat-top"><span>Gross sales</span><span class="stat-icon">₨</span></div><p class="stat-value">₨ 2.48M</p><p class="stat-note"><span class="positive">↑ 9.6%</span> vs. previous period</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Net orders</span><span class="stat-icon">▤</span></div><p class="stat-value">418</p><p class="stat-note"><span class="positive">↑ 6.2%</span> vs. previous period</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Average order value</span><span class="stat-icon">↗</span></div><p class="stat-value">₨ 5,948</p><p class="stat-note"><span class="positive">↑ 3.1%</span> vs. previous period</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Conversion rate</span><span class="stat-icon">◎</span></div><p class="stat-value">2.84%</p><p class="stat-note"><span class="positive">↑ 0.4%</span> vs. previous period</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Refund rate</span><span class="stat-icon">↶</span></div><p class="stat-value">1.2%</p><p class="stat-note"><span class="positive">↓ 0.2%</span> vs. previous period</p></article>
+          </section>
+          <div class="grid analytics-grid">
+            <section class="panel"><div class="panel-header"><div><h2>Revenue by month</h2><p class="panel-subtitle">Sales revenue · April–October 2026</p></div><span class="status">PKR</span></div><div class="panel-body"><div class="chart" role="img" aria-label="Revenue bar chart, increasing overall from April to October"><div class="chart-column"><span class="chart-bar" style="height:38%"></span><span class="chart-label">Apr</span></div><div class="chart-column"><span class="chart-bar" style="height:52%"></span><span class="chart-label">May</span></div><div class="chart-column"><span class="chart-bar" style="height:45%"></span><span class="chart-label">Jun</span></div><div class="chart-column"><span class="chart-bar" style="height:68%"></span><span class="chart-label">Jul</span></div><div class="chart-column"><span class="chart-bar" style="height:59%"></span><span class="chart-label">Aug</span></div><div class="chart-column"><span class="chart-bar" style="height:76%"></span><span class="chart-label">Sep</span></div><div class="chart-column"><span class="chart-bar" style="height:92%"></span><span class="chart-label">Oct</span></div></div></div></section>
+            <section class="panel"><div class="panel-header"><div><h2>Sales by category</h2><p class="panel-subtitle">Share of sales for this period</p></div></div><div class="panel-body bar-chart">
+              <div class="bar-row"><span>Gaming laptops</span><div class="progress-track"><div class="progress-fill" style="width:78%"></div></div><strong>₨ 812k</strong></div>
+              <div class="bar-row"><span>Gaming PCs</span><div class="progress-track"><div class="progress-fill" style="width:64%"></div></div><strong>₨ 664k</strong></div>
+              <div class="bar-row"><span>Graphics cards</span><div class="progress-track"><div class="progress-fill" style="width:49%"></div></div><strong>₨ 508k</strong></div>
+              <div class="bar-row"><span>Monitors</span><div class="progress-track"><div class="progress-fill" style="width:34%"></div></div><strong>₨ 351k</strong></div>
+              <div class="bar-row"><span>Peripherals</span><div class="progress-track"><div class="progress-fill" style="width:15%"></div></div><strong>₨ 151k</strong></div>
+            </div></section>
+            <section class="panel"><div class="panel-header"><div><h2>Order fulfilment</h2><p class="panel-subtitle">Status breakdown · last 30 days</p></div></div><div class="panel-body quick-list">
+              <div><div class="quick-row"><span class="quick-label">Delivered</span><span class="quick-value">312 orders · 74.6%</span></div><div class="progress-track" style="margin-top:8px"><div class="progress-fill" style="width:75%"></div></div></div>
+              <div><div class="quick-row"><span class="quick-label">Processing / shipped</span><span class="quick-value">82 orders · 19.6%</span></div><div class="progress-track" style="margin-top:8px"><div class="progress-fill" style="width:20%;background:var(--blue)"></div></div></div>
+              <div><div class="quick-row"><span class="quick-label">Cancelled / returned</span><span class="quick-value">24 orders · 5.8%</span></div><div class="progress-track" style="margin-top:8px"><div class="progress-fill" style="width:6%;background:var(--yellow)"></div></div></div>
+            </div></section>
+            <section class="panel"><div class="panel-header"><div><h2>Customer growth</h2><p class="panel-subtitle">New registered customers</p></div></div><div class="panel-body">
+              <p class="stat-value" style="margin:0">126 <span style="font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0;color:var(--muted)">new this month</span></p>
+              <div class="chart" role="img" aria-label="Customer growth chart with the highest values in October"><div class="chart-column"><span class="chart-bar" style="height:30%"></span><span class="chart-label">Apr</span></div><div class="chart-column"><span class="chart-bar" style="height:46%"></span><span class="chart-label">May</span></div><div class="chart-column"><span class="chart-bar" style="height:41%"></span><span class="chart-label">Jun</span></div><div class="chart-column"><span class="chart-bar" style="height:60%"></span><span class="chart-label">Jul</span></div><div class="chart-column"><span class="chart-bar" style="height:54%"></span><span class="chart-label">Aug</span></div><div class="chart-column"><span class="chart-bar" style="height:71%"></span><span class="chart-label">Sep</span></div><div class="chart-column"><span class="chart-bar" style="height:89%"></span><span class="chart-label">Oct</span></div></div>
+            </div></section>
+          </div>
+          <p class="report-note" style="margin-top:18px">Reporting data is sample content for this static HTML/CSS assignment. Connect a data source when adding application functionality.</p>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
